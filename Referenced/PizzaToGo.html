@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+    <title>Pizza To Go</title>
+    <script type="text/javascript">
+
+        
+   function calcPizzaPrice1() {
+   let basePrice = 0;
+          let len = document.forms[0].pizza.length;
+			
+			 for (let i = 0; i < len; i++)
+			 {
+			     if (document.forms[0].pizza[i].checked == true){
+                       basePrice = parseFloat(document.forms[0].pizza[i].value);
+                       break;
+				}
+           
+        }
+        
+           let extras = 0;
+            let len2 = document.forms[0].toppings.length;
+			
+			 for (let j = 0; j < len2; j++)
+			 {
+            if (document.forms[0].toppings[j].checked == true)
+
+                extras += parseFloat(document.forms[0].toppings[j].value);
+
+        
+}
+       document.getElementById("total").innerHTML = "Your Order total is:" + (basePrice + extras);
+        }
+
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <h1>
+
+        Pizza To Go</h1>
+
+    <form  action="" method="get">
+
+    <p>
+
+        <input type="radio" value="12.95" name = "pizza"  />
+
+        Vegetarian ($12.95)<br />
+
+        <input type="radio" value="14.95" name = "pizza"  />
+
+        Hawaiian ($14.95)<br />
+
+        <input type="radio" value="16.95" name = "pizza"  />
+
+        Meat Lovers ($16.95)<br />
+
+        <input type="radio" value="18.95" name = "pizza"  />
+
+        The Works ($18.95)<br />
+
+        <input type="radio" value="15.95" name = "pizza"  />
+
+        Four Cheese ($15.95)</p>
+
+    <p>
+
+		<input name="toppings" type="checkbox" value="2"  />Extra cheese
+
+		($2.00)
+
+		<input name="toppings" type="checkbox" value="2.5" />Mushrooms
+
+		($2.50)
+
+		<input name="toppings" type="checkbox" value="3"  />Anchovies
+
+		($3.00)
+
+	</p>
+
+    
+            <input type="button" id="anne" value="Click me!" onClick="calcPizzaPrice1()">
+
+    </form>
+    
+    <p id="total">Your Order total is: </p>
+
+</body>
+
+</html>

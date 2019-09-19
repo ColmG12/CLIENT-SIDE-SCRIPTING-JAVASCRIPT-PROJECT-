@@ -1,0 +1,3009 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!--Reference for Bootstrap design I have used - https://startbootstrap.com/previews/agency/-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, 
+                                 shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Colm Gallagher - Client Side Scripting CA 2019</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" 
+        type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" 
+        rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' 
+        rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=
+        Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' 
+        rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/agency.min.css" rel="stylesheet">
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+    
+ <!--<link href="cvtech.css" rel="stylesheet" type="text/css" /> -->
+ 
+ 
+
+ <script type="text/javascript">
+ 
+ 
+
+        //reference for populating listbox - Anne O''Brien - TeamRosters.html 
+
+        var antrim = new Array();
+
+        antrim[0] = "Belfast";
+
+        antrim[1] = "Lisburn";
+
+        antrim[2] = "Ballymena";
+
+        antrim[3] = "Carrickfergus";
+        
+        var armagh = new Array();
+
+        armagh[0] = "Newry";
+
+        armagh[1] = "Lurgan";
+
+        armagh[2] = "Portadown";
+
+        armagh[3] = "Armagh";
+        
+        var carlow = new Array();
+
+        carlow[0] = "Ballymurphy";
+
+        carlow[1] = "Nurney";
+
+        carlow[2] = "Tinryland";
+
+        carlow[3] = "Tullow";
+        
+        var cavan = new Array();
+
+        cavan[0] = "Cavan Town";
+
+        cavan[1] = "Ballyjamesduff";
+
+        cavan[2] = "Virginia";
+
+        cavan[3] = "Kingscourt";
+        
+        var clare = new Array();
+
+        clare[0] = "Ennis";
+
+        clare[1] = "Killimer";
+
+        clare[2] = "Kilrush";
+
+        clare[3] = "Quilty";
+        
+        var cork = new Array();
+
+        cork[0] = "Bantry";
+
+        cork[1] = "Fermoy";
+
+        cork[2] = "Kinalea";
+
+        cork[3] = "Kinsale";
+        
+        var derry = new Array();
+
+        derry[0] = "Banagher";
+
+        derry[1] = "Killowen";
+
+        derry[2] = "Lissan";
+
+        derry[3] = "Templemore";
+        
+        var donegal = new Array();
+
+        donegal[0] = "Donegal Town";
+
+        donegal[1] = "Killybegs";
+
+        donegal[2] = "Letterkenny";
+
+        donegal[3] = "Muff";
+        
+        var down = new Array();
+
+        down[0] = "Bangor";
+
+        down[1] = "Dundonald";
+
+        down[2] = "Hollywood";
+
+        down[3] = "Newcastle";
+        
+        var dublin = new Array();
+
+        dublin[0] = "Blanchardstown";
+
+        dublin[1] = "Dublin";
+
+        dublin[2] = "Swords";
+
+        dublin[3] = "Tallaght";
+        
+        var fermanagh = new Array();
+
+        fermanagh[0] = "Enniskillen";
+
+        fermanagh[1] = "Irvinestown";
+
+        fermanagh[2] = "Kesh";
+
+        fermanagh[3] = "Rosslea";
+        
+        var galway = new Array();
+
+        galway[0] = "Athenry";
+
+        galway[1] = "Galway Town";
+
+        galway[2] = "Loughrea";
+
+        galway[3] = "Tuam";
+        
+        var kerry = new Array();
+
+        kerry[0] = "Dingle";
+
+        kerry[1] = "Killarney";
+
+        kerry[2] = "Listowel";
+
+        kerry[3] = "Tralee";
+        
+        var kildare = new Array();
+
+        kildare[0] = "Athy";
+
+        kildare[1] = "Curragh";
+
+        kildare[2] = "Leixlip";
+
+        kildare[3] = "Naas";
+        
+        var kilkenny = new Array();
+
+        kilkenny[0] = "Ballyfoyle";
+
+        kilkenny[1] = "Hugginstown";
+
+        kilkenny[2] = "Piltown";
+
+        kilkenny[3] = "Windgap";
+        
+        var laois = new Array();
+
+        laois[0] = "Abbeyleix";
+
+        laois[1] = "Ballybrophy";
+
+        laois[2] = "Portarlington";
+
+        laois[3] = "Portlaois";
+        
+        var leitrim = new Array();
+
+        leitrim[0] = "Carrick On Shannon";
+
+        leitrim[1] = "Drumshanbo";
+
+        leitrim[2] = "Mohill";
+
+        leitrim[3] = "Roosky";
+        
+        var limerick = new Array();
+
+        limerick[0] = "Abbeyfeale";
+
+        limerick[1] = "Adare";
+
+        limerick[2] = "Limerick City";
+
+        limerick[3] = "Newcastle West";
+        
+        var longford = new Array();
+
+        longford[0] = "Ballymahon";
+
+        longford[1] = "Edgeworthstown";
+
+        longford[2] = "Granard";
+
+        longford[3] = "Longford Town";
+        
+        var louth = new Array();
+
+        louth[0] = "Ardee";
+
+        louth[1] = "Drogheda";
+
+        louth[2] = "Dundalk Town";
+
+        louth[3] = "Tullyallen";
+        
+        var mayo = new Array();
+
+        mayo[0] = "Achill Island";
+
+        mayo[1] = "Ballina";
+
+        mayo[2] = "Castlebar";
+
+        mayo[3] = "Westport";
+        
+        var meath = new Array();
+
+        meath[0] = "Ashbourne";
+
+        meath[1] = "Dunboyne";
+
+        meath[2] = "Kells";
+
+        meath[3] = "Navan";
+        
+        var monaghan = new Array();
+
+        monaghan[0] = "Castleblayney";
+
+        monaghan[1] = "Clones";
+
+        monaghan[2] = "Emyvale";
+
+        monaghan[3] = "Monaghan Town";
+        
+        var offaly = new Array();
+
+        offaly[0] = "Banagher";
+
+        offaly[1] = "Birr";
+
+        offaly[2] = "Edenderry";
+
+        offaly[3] = "Tullamore";
+        
+        var roscommon = new Array();
+
+        roscommon[0] = "Athlone";
+
+        roscommon[1] = "Boyle";
+
+        roscommon[2] = "Castlereagh";
+
+        roscommon[3] = "Roscommon Town";
+        
+        var sligo = new Array();
+
+        sligo[0] = "Ballymote";
+
+        sligo[1] = "Sligo Town";
+
+        sligo[2] = "Strandhill";
+
+        sligo[3] = "Tubbercurry";
+        
+        var tipperary = new Array();
+
+        tipperary[0] = "Cashel";
+
+        tipperary[1] = "CLonmel";
+
+        tipperary[2] = "Tipperary Town";
+
+        tipperary[3] = "Thurles";
+        
+        var tyrone = new Array();
+
+        tyrone[0] = "Cookstown";
+
+        tyrone[1] = "Dungannon";
+
+        tyrone[2] = "Omagh";
+
+        tyrone[3] = "Strabane";
+        
+        var waterford = new Array();
+
+        waterford[0] = "Dungarvan";
+
+        waterford[1] = "Tallow";
+
+        waterford[2] = "Waterford City";
+
+        waterford[3] = "Villierstown";
+        
+        var westmeath = new Array();
+
+        westmeath[0] = "Ballinahown";
+
+        westmeath[1] = "Glassan";
+
+        westmeath[2] = "Kilbeggan";
+
+        westmeath[3] = "Mullingar";  
+        
+        var wexford = new Array();
+
+        wexford[0] = "Enniscorthy";
+
+        wexford[1] = "Gorey";
+
+        wexford[2] = "Rosslare";
+
+        wexford[3] = "Wexford Town";
+        
+        var wicklow = new Array();
+
+        wicklow[0] = "Arklow";
+
+        wicklow[1] = "Bray";
+
+        wicklow[2] = "Greystones";
+
+        wicklow[3] = "Wicklow Town";
+
+        
+     function fillCountyRegion(county) {
+
+            document.forms[0].county.options.length = 0;
+
+            var countyName = "";
+
+            var region = new Option();
+
+            switch (county) {
+
+                case 1:
+
+                    for (var i = 0; i < antrim.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = antrim[i];
+
+                        region.value = antrim[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+
+                case 2:
+
+                    for (var i = 0; i < armagh.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = armagh[i];
+
+                        region.value = armagh[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 3:
+
+                    for (var i = 0; i < carlow.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = carlow[i];
+
+                        region.value = carlow[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 4:
+
+                    for (var i = 0; i < cavan.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = cavan[i];
+
+                        region.value = cavan[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 5:
+
+                    for (var i = 0; i < clare.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = clare[i];
+
+                        region.value = clare[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 6:
+
+                    for (var i = 0; i < cork.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = cork[i];
+
+                        region.value = cork[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 7:
+
+                    for (var i = 0; i < derry.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = derry[i];
+
+                        region.value = derry[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 8:
+
+                    for (var i = 0; i < donegal.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = donegal[i];
+
+                        region.value = donegal[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 9:
+
+                    for (var i = 0; i < down.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = down[i];
+
+                        region.value = down[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 10:
+
+                    for (var i = 0; i < dublin.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = dublin[i];
+
+                        region.value = dublin[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 11:
+
+                    for (var i = 0; i < fermanagh.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = fermanagh[i];
+
+                        region.value = fermanagh[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 12:
+
+                    for (var i = 0; i < galway.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = galway[i];
+
+                        region.value = galway[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 13:
+
+                    for (var i = 0; i < kerry.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = kerry[i];
+
+                        region.value = kerry[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 14:
+
+                    for (var i = 0; i < kildare.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = kildare[i];
+
+                        region.value = kildare[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 15:
+
+                    for (var i = 0; i < kilkenny.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = kilkenny[i];
+
+                        region.value = kilkenny[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 16:
+
+                    for (var i = 0; i < laois.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = laois[i];
+
+                        region.value = laois[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 17:
+
+                    for (var i = 0; i < leitrim.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = leitrim[i];
+
+                        region.value = leitrim[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 18:
+
+                    for (var i = 0; i < limerick.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = limerick[i];
+
+                        region.value = limerick[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 19:
+
+                    for (var i = 0; i < longford.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = longford[i];
+
+                        region.value = longford[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 20:
+
+                    for (var i = 0; i < louth.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = louth[i];
+
+                        region.value = louth[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 21:
+
+                    for (var i = 0; i < mayo.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = mayo[i];
+
+                        region.value = mayo[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 22:
+
+                    for (var i = 0; i < meath.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = meath[i];
+
+                        region.value = meath[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 23:
+
+                    for (var i = 0; i < monaghan.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = monaghan[i];
+
+                        region.value = monaghan[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 24:
+
+                    for (var i = 0; i < offaly.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = offaly[i];
+
+                        region.value = offaly[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 25:
+
+                    for (var i = 0; i < roscommon.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = roscommon[i];
+
+                        region.value = roscommon[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 26:
+
+                    for (var i = 0; i < sligo.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = sligo[i];
+
+                        region.value = sligo[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 27:
+
+                    for (var i = 0; i < tipperary.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = tipperary[i];
+
+                        region.value = tipperary[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 28:
+
+                    for (var i = 0; i < tyrone.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = tyrone[i];
+
+                        region.value = tyrone[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 29:
+
+                    for (var i = 0; i < waterford.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = waterford[i];
+
+                        region.value = waterford[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 30:
+
+                    for (var i = 0; i < westmeath.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = westmeath[i];
+
+                        region.value = westmeath[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 31:
+
+                    for (var i = 0; i < wexford.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = wexford[i];
+
+                        region.value = wexford[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+                    
+                case 32:
+
+                    for (var i = 0; i < wicklow.length; ++i) {
+
+                        region = new Option();
+
+                        region.text = wicklow[i];
+
+                        region.value = wicklow[i];
+
+                        document.forms[0].county.options[i] = region;
+
+                    }
+
+                    break;
+
+            }
+
+        }
+        
+        
+       /* function calcSection1() {
+   let totalS1Q1 = 0;
+          let len = document.forms[0].S1Q1.length;
+			
+			 for (let i = 0; i < len; i++)
+			 {
+			     if (document.forms[0].S1Q1[i].checked == true){
+                       totalS1Q1 = parseFloat(document.forms[0].S1Q1[i].value);
+                       break;
+				}
+           
+            }
+        
+    let totalS1Q2 = 0;
+            let len2 = document.forms[0].S1Q2.length;
+			
+			 for (let j = 0; j < len2; j++)
+			 {
+            if (document.forms[0].S1Q2[j].checked == true){
+
+                totalS1Q2 += parseFloat(document.forms[0].S1Q2[j].value);
+                break;
+				} 
+        
+}
+        
+     document.getElementById("sec1").innerHTML = "Your section 1 total is:" + (totalS1Q1 + totalS1Q2);
+        }       */
+
+
+      /* var arr = []
+
+document.getElementById("sec1").addEventListener("click", function() {
+  var cbChecked = document.querySelector('[name="S1Q1"]:checked')
+  
+  if (cbChecked != null) {
+    arr.push(cbChecked.value)
+  }
+
+  console.log(arr)
+})       */
+
+ /* function calcSection1() {
+   var S1Q1Checked
+   
+   for (var i=0; i<document.fSec1.S1Q1.length; i++)  {
+if (document.fSec1.S1Q1[i].checked)  {
+
+S1Q1Checked = document.ffSec1.S1Q1[i].value
+
+}
+   
+if (S1Q1Checked)  {
+alert(S1Q1Checked)
+}
+else{
+alert("You did not make a selection")
+}
+
+}
+}  */
+
+/*References for help with loops
+http://jennifermadden.com/javascript/radioLoopEasy.html
+http://jennifermadden.com/javascript/loopRadio.html
+http://www.codestore.net/store.nsf/unid/EPSD-4RSS3P
+https://stackoverflow.com/questions/13935786/quiz-counts-radio-button-values
+https://stackoverflow.com/questions/44799808/javascript-test-with-radio-buttons-and-array
+  Fellow student Peter McCafferty
+  Tutor, Anne O'Brien - "Pizza to go" exercise
+  */
+
+    var score = new Array();
+    
+    score[1] = 0;
+        score[2] = 0;
+        score[3] = 0;
+        score[4] = 0;
+        score[5] = 0;
+        score[6] = 0;
+        score[7] = 0;
+        score[8] = 0;
+        score[9] = 0;
+        score[10] = 0;
+    
+    var i;
+    var j;
+    var count = 0;
+
+    function calcSection1() 
+    {
+
+    count = 0;
+    
+    score[0] = 0;
+        for (i = 1; i < 5; i++) {
+            for (j = 0; j < 5; j++) 
+            {
+                if (document.getElementsByName("S1Q" + i)[j].checked) 
+                {
+                    score[0] += parseInt(document.getElementsByName("S1Q" + i)
+                    [j].value);
+                    count++;
+                    break;
+                }
+            }
+
+            }
+            if(count == 4)
+            {
+                if(score[0] < 10)
+                {
+                    document.getElementById("total").innerHTML = 
+                    "The face to face training session will be a great " +
+                    "opportunity for you to get guidance on progressing the " +
+                    "universability of your organisation";
+                     
+                }
+                else if(score[0] < 16)
+                {
+                    document.getElementById("total").innerHTML = 
+                    "With a little more thought you will see more opportunities " +
+                    "for increasing the universabilityof your services";
+                     
+                }
+                else
+                    document.getElementById("total").innerHTML = 
+                    "Well done you are clearly being proactive in considering " +
+                    "making your services more universal";
+                            
+            }
+            else
+            {
+                alert("Please choose an answer for each question");
+            }
+     }
+       
+         
+     function calcSection2() 
+     {
+        count = 0;
+        
+        score[1] = 0;
+        for (i = 1; i < 6; i++) 
+        {
+            for (j = 0; j < 5; j++)
+            {
+                if (document.getElementsByName("S2Q" + i)[j].checked) 
+                {
+                    score[1] += parseInt(document.getElementsByName("S2Q" + i)
+                    [j].value);
+                    count++;
+                    break;
+                }
+            }
+
+        }
+            if(count == 5)
+            {
+                if(score[1] < 12)
+                {
+                    document.getElementById("total2").innerHTML = 
+                     "The face to face training session will be a great " +
+                     "opportunity for you to get guidance on progressing the " +
+                     "universability of your organisation and its members";
+                    
+                }
+                else if(score[1] < 20)
+                {
+                    document.getElementById("total2").innerHTML = 
+                    "You have some sense of the benefits of a universal " +
+                    "organisation ";
+                     
+                }
+                else
+                    document.getElementById("total2").innerHTML = 
+                    "You have a very high level of appreciation of the mutual " +
+                    "benefits for all stakeholders in an inclusive organisation";
+                          
+            }
+            else
+            {
+                alert("Please choose an answer for each question");
+            }  
+    }
+    
+    
+    function calcSection3() 
+    {
+        count = 0;
+
+    score[2] = 0;
+        for (i = 1; i < 3; i++) 
+        {
+            for (j = 0; j < 5; j++) 
+            {
+                if (document.getElementsByName("S3Q" + i)[j].checked) 
+                {
+                    score[2] += parseInt(document.getElementsByName("S3Q" + i)
+                    [j].value);
+                    count++;
+                    break;
+                }
+            }
+
+        }
+            if(count == 2)
+            {
+                if(score[2] < 6)
+                {
+                    document.getElementById("total3").innerHTML = 
+                    "The face to face session has great scope to convince you " +
+                    "of the feasibility of promoting inclusion - just keep " +
+                    "your mind open to the possibility";
+                     
+                }
+                else
+                    document.getElementById("total3").innerHTML = 
+                    "You can see an inclusive future for your organisation and " +
+                    "its members, the challenge is now to ensure that your " +
+                    "decisions and resource allocations make this happen";
+                            
+            }
+            else
+            {
+                alert("Please choose an answer for each question");
+            }   
+    }
+    
+    
+    function calcSection4() 
+    {
+      count = 0;
+
+    score[3] = 0;
+
+        for (i = 0; i < 2; i++) 
+        {
+            if (document.getElementsByName("S4Q1")[i].checked)
+                {
+                    score[3] += parseInt(document.getElementsByName("S4Q1")
+                    [i].value);
+                    count++;
+                    break;
+                }
+        }
+            if(count == 1)
+            {
+                count = 0;
+                if(score[3] == 10)
+                {
+                    for (i = 0; i < 3; i++) 
+                    {
+                        if (document.getElementsByName("S4Q2")[i].checked)
+                        {
+                            score[3] += parseInt(document.getElementsByName("S4Q2")
+                            [i].value);
+                            count++;
+                        }
+                    }
+                    if(count < 1)
+                    {
+                        alert("please select as many boxes as you wish");   
+                    }
+                    else
+                    {
+                        if(score[3] == 20)
+                        {
+                            document.getElementById("total4").innerHTML = 
+                            "While there is some openness to equity in your " +
+                            "organisation the commitment is not yet wholly " +
+                            "embraced by all. Belief systems within the " +
+                            "organisation may be confused and possibly " +
+                            "conflicting. It would be desirable to promote " +
+                            "dialogue amongst your stakeholders around the " +
+                            "topic of inclusion";
+                            
+                        }
+                        else
+                        {
+                            document.getElementById("total4").innerHTML = 
+                            "Your organisation's value system is an inclusive " +
+                            "one. Your challenge will be to safeguard this and " +
+                            "promote this philosophy within the wider fitness " +
+                            "sector";
+                        }
+                    }
+                }
+                else
+                {
+                    document.getElementById("total4").innerHTML = 
+                    "The face to face training session will only be of value " +
+                    "to progressing your universability if you are willing to " +
+                    "challenge your belief system about access to fitness " +
+                    "services being a fundamental";
+                    
+                }
+            }
+            else
+            {
+                alert("Please choose an answer for question 1");
+            }
+     }
+    
+    
+    function calcSection5()
+    {
+        count = 0;
+        
+        score[4] = 0;
+            for (i = 1; i < 6; i++) 
+            {
+                for (j = 0; j < 2; j++) 
+                {
+                    if (document.getElementsByName("S5Q" + i)[j].checked) 
+                    {
+                        score[4] += parseInt(document.getElementsByName("S5Q" + i)
+                        [j].value);
+                        count++;
+                        break;
+                    }
+                }
+
+            }
+            if(count == 5)
+            {
+                if(score[4] == 0)
+                {
+                    document.getElementById("total5").innerHTML = 
+                    "Universability is not something with which you have yet " +
+                    "engaged, so the face to face training session will be an " +
+                    "opportunity for significant learning in this respect";
+                    
+                }
+                else if(score[4] == 10)
+                {
+                    document.getElementById("total5").innerHTML = 
+                    "Your policies are confused and possibly conflicting. " +
+                    "Some guidance will be needed to bring greater coherency " +
+                    "to your efforts to date";
+                     
+                }
+                else if(score[4] < 31)
+                {
+                    document.getElementById("total5").innerHTML = 
+                    "Your journey of making organisational policies inclusive " +
+                    "has started well and this may be the catalyst for enhanced " +
+                    "universability, if you are open to progressive change";
+                    
+                }
+
+                else
+                    document.getElementById("total5").innerHTML = 
+                    "Your intentions are very sound in respect of inclusion " +
+                    "and you have the potential to be a high achiever in this " +
+                    "respect";
+                          
+            }
+            else
+            {
+                alert("Please choose an answer for each question");
+            }   
+    }
+    
+    
+    function calcSection6()
+    {
+        count = 0;
+        
+        score[5] = 0;
+            for (i = 1; i < 6; i++) 
+            {
+                for (j = 0; j < 2; j++) 
+                {
+                    if (document.getElementsByName("S6Q" + i)[j].checked) 
+                    {
+                        score[5] += parseInt(document.getElementsByName("S6Q" + i)
+                        [j].value);
+                        count++;
+                        break;
+                    }
+                }
+            }
+
+            if(count == 5)
+            {
+                if(score[5] == 0)
+                {
+                    document.getElementById("total6").innerHTML = 
+                    "You have great scope for learning during the face to face " +
+                    "training session, once you have an open mind to the " +
+                    "possibilities that an inclusive approach can offer";
+                    
+                }
+                else if(score[5] < 21)
+                {
+                    document.getElementById("total6").innerHTML = 
+                    "You have made a positive start upon which your " +
+                    "organisation can build sound relationships with people " +
+                    "with disabilities. Unit three will offer you more ideas " +
+                    "in respect of forging alliances with people with disabilities";
+                   
+                }
+                else
+                    document.getElementById("total6").innerHTML = 
+                    "You are already a potential resource for people with " +
+                    "disabilities in your community, as your networks are an " +
+                    "essential element in the UFIT approach";
+                            
+            }
+            else
+            {
+                alert("Please choose an answer for each question");
+            }   
+    }
+    
+    
+    function calcSection7()
+    {
+        count = 0;
+        
+        score[6] = 0;
+            for (i = 1; i < 3; i++) 
+            {
+                for (j = 0; j < 2; j++)
+                 {
+                    if (document.getElementsByName("S7Q" + i)[j].checked) 
+                    {
+                        score[6] += parseInt(document.getElementsByName("S7Q" + i)
+                        [j].value);
+                        count++;
+                        break;
+                    }
+                }
+            }
+
+            if(count == 2)
+            {
+                if(score[6] == 0)
+                {
+                    document.getElementById("total7").innerHTML = 
+                    "Your organisation has yet to learn the power of dialogue " +
+                    "as a means of providing desirable fitness services to all " +
+                    "members of the community";
+                     
+                }
+                else
+                {
+                    document.getElementById("total7").innerHTML = 
+                    "As a listening organisation you have important information " +
+                    "that can guide your journey towards universability. " +
+                    "Your challenge is to interpret what is being said and to " +
+                    "translate it into inclusive actions";
+                 }
+            }
+            else
+            {
+                alert("Please choose an answer for each question");
+            }      
+    }
+      
+    function  calcSection8() 
+    {
+        count = 0;
+        
+        score[7] = 0;
+        let Q82 = 0;
+
+        for(i = 0; i < 2; i++)
+        {
+            if (document.getElementsByName("S8Q1")[i].checked)
+            {
+                score[7] += parseInt(document.getElementsByName("S8Q1")[i].value);
+                count++;
+                break;
+            }
+        }
+        if(score[7] == 10)
+        {
+        score[7] = 0;
+            for(i = 0; i < 4; i++)
+            {
+                if (document.getElementsByName("S8Q1.1")[i].checked)
+                {
+                    score[7] += parseInt(document.getElementsByName("S8Q1.1")
+                    [i].value);
+                }
+            }
+        }
+        for(i = 0; i < 2; i++)
+        {
+            if (document.getElementsByName("S8Q2")[i].checked)
+            {
+                Q82 = parseInt(document.getElementsByName("S8Q2")[i].value);
+                score[7] += parseInt(document.getElementsByName("S8Q2")[i].value);
+                count++;
+                break;
+            }
+        }
+        if(Q82 == 1)
+        {
+            for(i = 0; i < 4; i++)
+            {
+                if (document.getElementsByName("S8Q2.1")[i].checked)
+                {
+                    score[7] += parseInt(document.getElementsByName("S8Q2.1")
+                    [i].value);
+                }
+            }
+        }
+        if(count >= 2)
+        {
+            if(score[7] == 0)
+            {
+                document.getElementById("total8").innerHTML = 
+                "You have great scope for learning during the face to face " +
+                "training session, once you have an open mind to the " +
+                "possibilities that an inclusive approach can offer";
+            }
+            else if(score[7] < 21)
+            {
+                document.getElementById("total8").innerHTML = 
+                "You have made a positive start. You can use the questions " +
+                "here to reflect on how you can make more progress in this " +
+                "respect";
+            }
+            else
+            {
+                document.getElementById("total8").innerHTML = 
+                "You have the potential to be a role model of provision in the " +
+                "fitness sector. Programming is the basic unit of service " +
+                "delivery, where this is inclusive, your relevance to the " +
+                "wider community is enhanced";
+            }
+        }
+        else
+        {
+            alert("Please choose an answer for questions 1 and 2");
+        }
+    }
+    
+    function  calcSection9() 
+    {
+        count = 0;
+    	
+        score[8] = 0;
+
+        for(i = 1; i < 5; i++)
+        {
+            for(j = 0; j < 2; j++)
+            {
+                if (document.getElementsByName("S9Q1."+i)[j].checked)
+                {
+                    score[8] += parseInt(document.getElementsByName("S9Q1."+i)
+                    [j].value);
+                    count++;
+                    break;
+                }
+            }
+        }
+        for(i = 2; i < 4; i++)
+        {
+            for(j = 0; j < 2; j++)
+            {
+                if (document.getElementsByName("S9Q"+i)[j].checked)
+                {
+                    score[8] += parseInt(document.getElementsByName("S9Q" + i)
+                    [j].value);
+                    count++;
+                    break;
+                }
+            }
+        }
+        if(count == 6)
+        {
+            if(score[8] == 0)
+            {
+                document.getElementById("total9").innerHTML = 
+                "Universability is not something with which you have engaged " +
+                "so the face to face training session will be an opportunity " +
+                "for significant learning in this respect";
+            }
+            else if(score[8] == 10)
+            {
+                document.getElementById("total9").innerHTML = 
+                "Depending on the strength of influence of those with some " +
+                "perspective on inclusion, you may have scope to drive " +
+                "improvements from within. Consider the scope for repositioning " +
+                "those with training and knowledge in the area of inclusion to " +
+                "optimise their influence";
+            }
+            else if(score[8] < 31)
+            {
+                document.getElementById("total9").innerHTML = 
+                "There is some scope within your organisation to promote " +
+                "universability principles and broaden your organisation's " +
+                "relevance in the wider community ";
+                
+            }
+            else
+            {
+                document.getElementById("total9").innerHTML = 
+                "You have invested in your organisation's most important asset. " +
+                "Your potential to offer inclusive services is vast. " +
+                "The challenge is to make sure that you optimally deploy this " +
+                "wisdom to make all aspects of your service provision truly " +
+                "inclusive";
+            }
+        }
+        else
+        {
+            alert("Please choose an answer for each question");
+        }         
+    }
+    
+    
+      function  calcSection10() 
+      {
+        count = 0;
+        
+         score[9] = 0;
+       
+         for(i = 0; i < 2; i++)
+          {
+            if (document.getElementsByName("S10Q1")[i].checked)
+              {
+                  score[9] += parseInt(document.getElementsByName("S10Q1")
+                  [i].value);
+                  count++;
+                  break;
+              }
+          }
+          for(i = 0; i < 4; i++)
+          {
+              if (document.getElementsByName("S10Q2")[i].checked)
+              {
+                  score[9] += parseInt(document.getElementsByName("S10Q2")
+                  [i].value);
+                  count++;
+              }
+          }
+         
+          if(count >= 1)
+          {
+              if(score[9] == 0)
+              {
+                  document.getElementById("total10").innerHTML = 
+                  "The face to face training session will provide you with " +
+                  "wonderful ideas for making small (and inexpensive) changes " +
+                  "to enhance the universability of the facility.";
+              }
+              else if(score[9] == 10)
+              {
+                  document.getElementById("total10").innerHTML = 
+                  "While you have made a start in the direction of " +
+                  "universability there is considerable scope for improvements.";
+              }
+              else if(score[9] < 31)
+              {
+                  document.getElementById("total10").innerHTML = 
+                  "While some aspects of your facility are accessible there is " +
+                  "scope for enhancement. The face to face training session " +
+                  "will offer you some suggestions for improvement here.";
+              }
+              else
+              {
+                  document.getElementById("total10").innerHTML = 
+                  "The facility is largely accessible and hence there is " +
+                  "significant scope for promoting universability.";
+              }
+          }
+          else
+          {
+              alert("Please choose an answer for question 1");
+          }         
+    }
+    
+    
+      function  calcSection11()
+      {
+        count=0;
+        
+         score[10] = 0;
+          
+          for (i = 1; i < 3; i++) 
+          {
+                  for (j = 0; j < 2; j++) 
+                  {
+                      if (document.getElementsByName("S11Q" + i)[j].checked) 
+                      {
+                          score[10] += parseInt(document.getElementsByName
+                          ("S11Q" + i)[j].value);
+                          count++;
+                          break;
+                      }
+                  }
+          }
+          if(count == 2)
+          {
+              if(score[10] == 0)
+              {
+                  document.getElementById("total11").innerHTML = 
+                  "The face to face training session will offer you many ideas " +
+                  "for inclusivizing your promotion materials";
+              }
+              else if(score[10] == 10)
+              {
+                  document.getElementById("total11").innerHTML = 
+                  "Your organisation has some appreciation of the need for have " +
+                  "diversity to be represented in your promotional materials. " +
+                  "With a little more thoughtfulness your promotional campaigns " +
+                  "will speak louder to a wider audience ";
+              }
+              else
+              {
+                  document.getElementById("total11").innerHTML = 
+                  "You clearly understand the power of imagery and language and " +
+                  "your materials may be potential templates for others in the " +
+                  "promotion of fitness services";
+              }
+          }
+          else
+          {
+              alert("Please choose an answer for each question");
+          }       
+     }
+
+      
+    function getAllScores()
+    {   
+      var totalScore = score[0,1,2,3,4,5,6,7,8,9,10]; 
+		for (i = 0; i < score.length; i++)
+		{
+			totalScore += parseInt(score[i]);	
+		}  
+
+		alert("Total Score = " + totalScore);
+		
+		//localStorage.setItem("totalScore",JSON.stringify(totalScore));
+			
+		window.open("FinalScore.html")
+	}
+    
+  
+  //Reference for timeout https://www.geeksforgeeks.org/javascript-timer/  
+ //set minutes 
+        var mins = 10; 
+  
+        //calculate the seconds 
+        var secs = mins * 60; 
+  
+        //countdown function is evoked when page is loaded 
+        function countdown() { 
+            setTimeout('Decrement()', 60); 
+        } 
+  
+        //Decrement function decrement the value. 
+        function Decrement() { 
+            if (document.getElementById) { 
+                minutes = document.getElementById("minutes"); 
+                seconds = document.getElementById("seconds"); 
+  
+                //if less than a minute remaining 
+                //Display only seconds value. 
+                if (seconds < 59) { 
+                    seconds.value = secs; 
+                } 
+  
+                //Display both minutes and seconds 
+                //getminutes and getseconds is used to 
+                //get minutes and seconds 
+                else { 
+                    minutes.value = getminutes(); 
+                    seconds.value = getseconds(); 
+                } 
+                //when less than a minute remaining 
+                //colour of the minutes and seconds 
+                //changes to red 
+                if (mins < 1) { 
+                    minutes.style.color = "red"; 
+                    seconds.style.color = "red"; 
+                } 
+                //if seconds becomes zero, 
+                //then page alert time up 
+                if (mins < 0) { 
+                    window.open("Timeout.html"); 
+                    minutes.value = 0; 
+                    seconds.value = 0; 
+                } 
+                //if seconds > 0 then seconds is decremented 
+                else { 
+                    secs--; 
+                    setTimeout('Decrement()', 1000); 
+                } 
+            } 
+        } 
+  
+        function getminutes() { 
+            //minutes is seconds divided by 60, rounded down 
+            mins = Math.floor(secs / 60); 
+            return mins; 
+        } 
+  
+        function getseconds() { 
+            //take minutes remaining (as seconds) away  
+            //from total seconds remaining 
+            return secs - Math.round(mins * 60); 
+        } 
+   
+</script>
+
+    </script>
+    
+    <style>
+    
+    th {border: 1px solid black;
+        padding: 1em;
+        font-size: 1.2em;
+       }
+
+    td {border: 1px solid black;
+        padding: 1em;
+        font-size: 1em;
+       }
+
+    table {border-collapse: collapse;
+           width:100%;
+           margin-top: .5em;
+           margin-bottom: 4em;
+           }
+                 
+.tableheader{background-color: #9EDDF5;
+             font-weight: bold;
+             font-size: 3em;
+             text-align: center
+            }
+
+  .skyblue  { background-color: #F49FE7;
+            }   
+          
+</style>
+        
+</head>
+
+<body id="page-top">
+        
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Gallagher Audits</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" 
+              data-toggle="collapse" data-target="#navbarResponsive" 
+              aria-controls="navbarResponsive" aria-expanded="false" 
+              aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#introduction">Introduction</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+         </ul>  
+      </div>  
+    </div>
+    
+    <!--Reference for timeout https://www.geeksforgeeks.org/javascript-timer/-->
+    <!-- onload function is evoke when page is load --> 
+<!--countdown function is called when page is loaded --> 
+  
+<body onload="countdown();"> 
+    <div> 
+    <span style='font-size: 24px; font-weight: bold; color: yellow'>Time Left</span> 
+        <input id="minutes" type="text" style="width: 30px; 
+             border: none; font-size: 24px;  
+            font-weight: bold; color: blue;"><font size="5"> : 
+                        </font> 
+        <input id="seconds" type="text" style="width: 30px; 
+                        border: none; font-size: 24px; 
+                        font-weight: bold; color: blue;"> 
+    </div> 
+  </nav>
+  
+    
+
+
+
+
+  <!-- Header -->
+  <!--Reference for background image https://www.google.com/search?q=disability&rlz=1C1CHBF_enIE794IE799&tbm=isch&source=lnt&tbs=isz:l&sa=X&ved=0ahUKEwiFmJS7oI3iAhX1unEKHV8_DAcQpwUIHw&biw=1920&bih=937&dpr=1#imgrc=ZDTte5aL4SH_5M:-->
+  <header class="masthead">
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-lead-in">Organisation audit</div>
+        <div class="intro-heading text-uppercase">How's your ability with 
+        <span style='color: blue'>d</span>
+        <span style='color: red'>i</span>
+        <span style='color: yellow'>s</span> ability?</div>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" 
+           href="#introduction">Begin the survey</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Introduction -->
+  <section id="introduction">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Introduction</h2>
+          <h3 class="section-subheading text-muted">(No points awarded).</h3>
+       
+			<h1>Name of the Organisation:</h1><br>
+			<input type = "Text" name = "OrganisationName" size = "40" 
+            placeholder = "Organisation name" ><br><br> <br>
+			<h1>Description of Organisation:</h1><br> 
+			<input type = "text" name = "OrganisationDescription" size = "40" 
+            placeholder = "Organisation Description"><br><br>  <br>
+            <h1>Location:</h1><br>
+			<form name="main" action="">
+
+    <select name="Make" onchange="fillCountyRegion(this.selectedIndex);">
+
+        <option value="-1">Select County</option>
+
+        <option value="1">Antrim</option>
+
+        <option value="2">Armagh</option>
+        
+        <option value="3">Carlow</option>
+        
+        <option value="4">Cavan</option>
+        
+        <option value="5">Clare</option>
+        
+        <option value="6">Cork</option>
+        
+        <option value="7">Derry</option>
+        
+        <option value="8">Donegal</option>
+        
+        <option value="9">Down</option>
+        
+        <option value="10">Dublin</option>
+        
+        <option value="11">Fermanagh</option>
+        
+        <option value="12">Galway</option>
+        
+        <option value="13">Kerry</option>
+        
+        <option value="14">Kildare</option>
+        
+        <option value="15">Kilkenny</option>
+        
+        <option value="16">Laois</option>
+        
+        <option value="17">Leitrim</option>
+        
+        <option value="18">Limerick</option>
+        
+        <option value="19">Longford</option>
+        
+        <option value="20">Louth</option>
+        
+        <option value="21">Mayo</option>
+        
+        <option value="22">Meath</option>
+        
+        <option value="23">Monaghan</option>
+        
+        <option value="24">Offaly</option>
+        
+        <option value="25">Roscommon</option>
+        
+        <option value="26">Sligo</option>
+        
+        <option value="27">Tipperary</option>
+        
+        <option value="28">Tyrone</option>
+        
+        <option value="29">Waterford</option>
+        
+        <option value="30">Westmeath</option>
+        
+        <option value="31">Wexford</option>
+        
+        <option value="32">Wicklow</option>
+
+    </select>
+
+    <br /> 
+
+    <select name="county" size="4">
+
+        <option>&nbsp;</option>
+
+    </select>
+
+    </form>  <br>
+
+			<h1>Contact Number:</h1><br>
+                <input type = "text" name = "ContactNumber" size = "40" placeholder = "Contact Number"><br><br><br>
+  						
+  			
+            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" 
+           href="#portfolio">Take the questionaire</a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Grid -->
+  <section class="bg-light" id="portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Questionnaire</h2>
+          <h3 class="section-subheading text-muted">Please consider the following 
+          questions and identify your level of agreement with the statement<br><br>
+          </h3>
+        
+        </div>
+        <p>
+        <ol reversed>
+            <li>Strongly agree</li><br>
+            <li>Agree</li><br>
+            <li>Neutral/Don't know</li><br>
+            <li>Disagree</li><br>
+            <li>Strongly disagree</li><br>
+        </ol>.
+        </p>
+      </div>
+      <!--Reference for help with form, fellow student, James Mahoney-->
+      <!--Reference for help with tables, radio buttons, check boxes, my year 1 
+      semester 1 web design project - "Chart2012", "Form", "SiteMap"-->
+           <form id ="auditForm"  action="post" >
+      <table style="background-color: white">
+      <thead>
+           <tr>
+                <th class="tableheader" colspan="6">
+                <h2>Section 1: Verification (20)</h2></th>
+           </tr>
+           <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+          </tr>
+    </thead>
+    <tbody>
+          <tr class="skyblue">
+                <td>I and/or my colleagues know where to get information to help 
+                    us analyse the business case for consciously attracting 
+                    people with disabilities as members</td>
+                <td><input type="radio" name="S1Q1" value="1"></td>
+                <td><input type="radio" name="S1Q1" value="2"></td>
+                <td><input type="radio" name="S1Q1" value="3"></td>
+                <td><input type="radio" name="S1Q1" value="4"></td>
+                <td><input type="radio" name="S1Q1" value="5"></td>
+          </tr>
+          
+          <tr>
+                <td>I/my colleagues have researched the scope for increasing the 
+                    participation of the broader community, in particular people 
+                    with disabilities</td>
+                <td><input type="radio" name="S1Q2" value="1"></td>
+                <td><input type="radio" name="S1Q2" value="2"></td>
+                <td><input type="radio" name="S1Q2" value="3"></td>
+                <td><input type="radio" name="S1Q2" value="4"></td>
+                <td><input type="radio" name="S1Q2" value="5"></td>
+          </tr>
+          <tr class="skyblue">
+                <td>I know of disability service providers that I could link with 
+                in the local community</td>
+                <td><input type="radio" name="S1Q3" value="1"></td>
+                <td><input type="radio" name="S1Q3" value="2"></td>
+                <td><input type="radio" name="S1Q3" value="3"></td>
+                <td><input type="radio" name="S1Q3" value="4"></td>
+                <td><input type="radio" name="S1Q3" value="5"></td>
+          </tr>
+          <tr>
+                <td>My colleagues and I inclusivize our services to provide for 
+                people with disabilities</td>
+                <td><input type="radio" name="S1Q4" value="1"></td>
+                <td><input type="radio" name="S1Q4" value="2"></td>
+                <td><input type="radio" name="S1Q4" value="3"></td>
+                <td><input type="radio" name="S1Q4" value="4"></td>
+                <td><input type="radio" name="S1Q4" value="5"></td>
+          </tr>
+          
+          </tbody>
+      </table>
+      
+      <input type="button" id="sec1" value="Verdict" onClick="calcSection1()">
+     
+      
+      <p id="total"></p>
+       <br><br> <br>
+      
+      
+      <table style="background-color: white">
+      <thead>
+           <tr>
+                <th class="tableheader" colspan="6">
+                <h2>Section 2: Value Proposition (25)</h2></th>
+           </tr>
+           <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+          </tr>
+    </thead>
+    <tbody>
+          <tr class="skyblue">
+                <td>My colleagues and I have a significant contribution to make 
+                to the quality of life of people in our community, including 
+                people with disabilities</td>
+                <td><input type="radio" name="S2Q1" value="1"></td>
+                <td><input type="radio" name="S2Q1" value="2"></td>
+                <td><input type="radio" name="S2Q1" value="3"></td>
+                <td><input type="radio" name="S2Q1" value="4"></td>
+                <td><input type="radio" name="S2Q1" value="5"></td>
+          </tr>
+          
+          <tr>
+                <td>My colleagues and I have the scope to improve opportunities 
+                for participation in fitness activities for people living in, 
+                or visiting our community, including people with disabilities</td>
+                <td><input type="radio" name="S2Q2" value="1"></td>
+                <td><input type="radio" name="S2Q2" value="2"></td>
+                <td><input type="radio" name="S2Q2" value="3"></td>
+                <td><input type="radio" name="S2Q2" value="4"></td>
+                <td><input type="radio" name="S2Q2" value="5"></td>
+          </tr>
+          <tr class="skyblue">
+                <td>The benefits of increasing our UniversAbility to increase 
+                participation are clear</td>
+                <td><input type="radio" name="S2Q3" value="1"></td>
+                <td><input type="radio" name="S2Q3" value="2"></td>
+                <td><input type="radio" name="S2Q3" value="3"></td>
+                <td><input type="radio" name="S2Q3" value="4"></td>
+                <td><input type="radio" name="S2Q3" value="5"></td>
+          </tr>
+          <tr>
+                <td>My colleagues and I play a major role in providing health 
+                services to the entire community, including people with 
+                disabilities</td>
+                <td><input type="radio" name="S2Q4" value="1"></td>
+                <td><input type="radio" name="S2Q4" value="2"></td>
+                <td><input type="radio" name="S2Q4" value="3"></td>
+                <td><input type="radio" name="S2Q4" value="4"></td>
+                <td><input type="radio" name="S2Q4" value="5"></td>
+          </tr>
+          <tr class="skyblue">
+                <td>The UniversAbility of our fitness services increases the job 
+                satisfaction and turnover of my staff</td>
+                <td><input type="radio" name="S2Q5" value="1"></td>
+                <td><input type="radio" name="S2Q5" value="2"></td>
+                <td><input type="radio" name="S2Q5" value="3"></td>
+                <td><input type="radio" name="S2Q5" value="4"></td>
+                <td><input type="radio" name="S2Q5" value="5"></td>
+          </tr>
+          
+          </tbody>
+      </table>
+      
+      <input type="button" id="sec2" value="Verdict" onClick="calcSection2()">
+      
+      <p id="total2"></p>
+       <br><br> 
+      
+      
+      <table style="background-color: white">
+      <thead>
+           <tr>
+                <th class="tableheader" colspan="6">
+                <h2>Section 3: Vision (10)</h2></th>
+           </tr>
+           <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+          </tr>
+    </thead>
+    <tbody>
+          <tr >
+                <td>My colleagues and I envision ourselves as leaders of cultural 
+                change</td>
+                <td><input type="radio" name="S3Q1" value="1"></td>
+                <td><input type="radio" name="S3Q1" value="2"></td>
+                <td><input type="radio" name="S3Q1" value="3"></td>
+                <td><input type="radio" name="S3Q1" value="4"></td>
+                <td><input type="radio" name="S3Q1" value="5"></td>
+          </tr>
+          
+           </tbody>
+      </table>
+          
+    <h6>
+        <B> 
+          Which of the following statements best describes your situation within 
+          your organisation (Please select one)
+        </B>  
+        </h6> <br>  <br>
+        
+   <table style="background-color: white">
+    
+         
+    
+    <tbody>
+          <tr class="skyblue">
+                <td>I and/or my colleagues have identified set targets for 
+                increasing the UniversAbility of our services and are putting 
+                strategies in place to achieve these goals</td>
+                <td><input type="radio" name="S3Q2" value="5"></td>
+          </tr>
+      
+    <tbody>
+          <tr >
+                <td>I and/or my colleagues have identified scope for increasing the UniversAbility of our services</td>
+                <td><input type="radio" name="S3Q2" value="4"></td>
+          </tr> 
+          
+          </tbody>
+          
+          <tbody>
+          <tr class="skyblue">
+                <td>I THINK there may be scope for inclusivizing our services 
+                but am not sure</td>
+                <td><input type="radio" name="S3Q2" value="3"></td>
+          </tr>
+      
+    <tbody>
+          <tr >
+                <td>I have never considered inclusivizing our services until 
+                now</td>
+                <td><input type="radio" name="S3Q2" value="2"></td>
+          </tr> 
+          
+          </tbody>
+          
+          <tbody>
+          <tr class="skyblue">
+                <td>I don't think inclusivizing our services, in particular for 
+                people with disabilities, is really an option for us but won't 
+                rule it out completely until it has been fully explored</td>
+                <td><input type="radio" name="S3Q2" value="1"></td>
+          </tr>
+      
+    <tbody>
+      </table>
+      
+      <input type="button" id="sec3" value="Verdict" onClick="calcSection3()">
+      
+      <p id="total3"></p>
+      <br><br> <br>
+      
+       <table style="background-color: white">
+      <thead>
+           <tr>
+                <th class="tableheader" colspan="3">
+                <h2>Section 4: Philosophy (40)</h2></th>
+           </tr>
+           <tr>
+                <th></th>
+                <th>Yes</th>
+                <th>No</th>
+          </tr>
+    </thead>
+    <tbody>
+          <tr >
+                <td>Does your organisation have stated ideals in your strategic 
+                plan or other management documents which relate UniversAbility 
+                of your services?</td>
+                <td><input type="radio" name="S4Q1" value="10"></td>
+                <td><input type="radio" name="S4Q1" value="0"></td>
+          </tr>
+          
+           </tbody>
+      </table>
+      
+      <h6>
+        <B> 
+          Do you think an inclusive philosophy is a lived experience by:
+        </B>  
+        </h6> <br>  
+      
+      
+      <table style="background-color: white">
+      <thead>
+           
+           <tr>
+                <th></th>
+                <th>Yes</th>
+          </tr>
+    </thead>
+    <tbody>
+          <tr class="skyblue">
+                <td>Management?</td>
+                <td><input type="checkbox" name="S4Q2" value="10"></td>
+          </tr>
+          
+           </tbody>
+           <tbody>
+          <tr >
+                <td>Staff?</td>
+                <td><input type="checkbox" name="S4Q2" value="10"></td>
+          </tr>
+          
+           </tbody>
+           <tbody>
+          <tr class="skyblue">
+                <td>Customers?</td>
+                <td><input type="checkbox" name="S4Q2" value="10"></td>
+          </tr>
+          
+           </tbody>
+      </table>
+      
+      <input type="button" id="sec4" value="Verdict" onClick="calcSection4()">
+      
+      <p id="total4"></p>
+      <br><br> <br>
+      
+      <table style="background-color: white">
+      <thead>
+           <tr>
+                <th class="tableheader" colspan="3">
+                <h2>Section 5: Policy (50)</h2></th>
+           </tr>
+           <tr>
+                <th></th>
+                <th>Yes</th>
+                <th>No</th>
+          </tr>
+    </thead>
+    <tbody>
+          <tr >
+                <td>Does your charging policy account for the varied needs of 
+                your customers? E.g. No charge for personal assistants</td>
+                <td><input type="radio" name="S5Q1" value="10"></td>
+                <td><input type="radio" name="S5Q1" value="0"></td>
+          </tr>
+          
+           </tbody>
+    <tbody>
+          <tr class="skyblue">
+                <td>Do you track and monitor the proportion of your club members 
+                who experience disabilities?</td>
+                <td><input type="radio" name="S5Q2" value="10"></td>
+                <td><input type="radio" name="S5Q2" value="0"></td>
+          </tr>
+          
+           </tbody>
+      </table>
+      
+      <h6>
+        <B> 
+          Have you a budget allocated to:<br> <br>
+                 (a) increasing the UniversAbility of your services? 
+                 (eg. facilities, equipment and staff training)
+        </B>  
+        </h6> <br>
+        <input type = "radio" name = "S5Q3" value = "10"> Yes<br>
+        <input type = "radio" name = "S5Q3" value = "0"> No<br>
+        <input type = "radio" name = "S5Q3" value = "10"> 
+                Not needed because equipment is already fully accessible<br><br> 
+        <h6>
+        <B>    
+            (b) increasing the UniversAbility of your policies?
+         </B>  
+        </h6> <br>
+        <input type = "radio" name = "S5Q4" value = "10"> Yes<br>
+        <input type = "radio" name = "S5Q4" value = "0"> No<br><br>
+        
+        <table style="background-color: white">
+      
+           <tr>
+                <th></th>
+                <th>Yes</th>
+                <th>No</th>
+          </tr>
+    </thead>
+    <tbody>
+          <tr >
+                <td>Are you familiar with the national legislation that relates 
+                to disability service provision?</td>
+                <td><input type="radio" name="S5Q5" value="10"></td>
+                <td><input type="radio" name="S5Q5" value="0"></td>
+          </tr>
+          
+           </tbody>
+           </table>
+        
+      <input type="button" id="sec5" value="Verdict" onClick="calcSection5()">
+      
+      <p id="total5"></p>
+      <br><br> <br>
+      
+        
+    <table style="background-color: white">
+      <thead>
+           <tr>
+                <th class="tableheader" colspan="3">
+                <h2>Section 6: Processes (50)</h2></th>
+           </tr>
+           <tr>
+                <th></th>
+                <th>Yes</th>
+                <th>No</th>
+          </tr>
+    </thead>
+    <tbody>
+          <tr class="skyblue">
+                <td>Do you engage with disability groups in your local 
+                community?</td>
+                <td><input type="radio" name="S6Q1" value="10"></td>
+                <td><input type="radio" name="S6Q1" value="0"></td>
+          </tr>
+          
+           </tbody>
+    <tbody>
+          <tr >
+                <td>Have you forged any alliance/partnership with any 
+                disability organisation?</td>
+                <td><input type="radio" name="S6Q2" value="10"></td>
+                <td><input type="radio" name="S6Q2" value="0"></td>
+          </tr>
+          
+           </tbody>
+    <tbody>
+          <tr class="skyblue">
+                <td>Have you or your staff embraced any assistive technologies 
+                (E.g. Assist-Mi app)?</td>
+                <td><input type="radio" name="S6Q3" value="10"></td>
+                <td><input type="radio" name="S6Q3" value="0"></td>
+          </tr>
+          
+           </tbody>
+    <tbody>
+          <tr >
+                <td>Have you or your colleagues undertaken any research on 
+                Inclusivizing your service?</td>
+                <td><input type="radio" name="S6Q4" value="10"></td>
+                <td><input type="radio" name="S6Q4" value="0"></td>
+          </tr>
+          
+           </tbody>
+    <tbody>
+          <tr class="skyblue">
+                <td>Do you encourage your staff to engage in customer 
+                satisfaction conversations with different user groups?</td>
+                <td><input type="radio" name="S6Q5" value="10"></td>
+                <td><input type="radio" name="S6Q5" value="0"></td>
+          </tr>
+          
+           </tbody>
+    
+      </table>
+      
+      <input type="button" id="sec6" value="Verdict" onClick="calcSection6()">
+      
+      <p id="total6"></p>
+      <br><br> <br>
+      
+      
+      <table style="background-color: white">
+      <thead>
+           <tr>
+                <th class="tableheader" colspan="3">
+                <h2>Section 7: Perception (20)</h2></th>
+           </tr>
+           <tr>
+                <th></th>
+                <th>Yes</th>
+                <th>No</th>
+          </tr>
+    </thead>
+    <tbody>
+          <tr >
+                <td>Do you gather information from your users on their beliefs 
+                about fitness being a fundamental right for all?</td>
+                <td><input type="radio" name="S7Q1" value="10"></td>
+                <td><input type="radio" name="S7Q1" value="0"></td>
+          </tr>
+          
+           </tbody>
+    <tbody>
+          <tr class="skyblue">
+                <td>Do you gather information from people who do NOT use your 
+                facility on fitness being a fundamental right for all?</td>
+                <td><input type="radio" name="S7Q2" value="10"></td>
+                <td><input type="radio" name="S7Q2" value="0"></td>
+          </tr>
+          
+           </tbody>
+      </table>
+      
+      <input type="button" id="sec7" value="Verdict" onClick="calcSection7()">
+      
+      <p id="total7"></p>
+      <br><br> <br>
+      
+      
+      <table style="background-color: white">
+      <thead>
+           <tr>
+                <th class="tableheader" colspan="3">
+                <h2>Section 8: Programmes (80)</h2></th>
+           </tr>
+           <tr>
+                <th></th>
+                <th>Yes</th>
+                <th>No</th>
+          </tr>
+    </thead>
+    <tbody>
+          <tr >
+                <td>1. Do you and your staff provide programmes specifically for 
+                people with disabilities?</td>
+                <td><input type="radio" name="S8Q1" value="10"></td>
+                <td><input type="radio" name="S8Q1" value="0"></td>
+          </tr>
+          
+           </tbody>
+           </table>
+           
+           <h6>
+        <B> 
+          If Yes please complete table below
+        </B>  
+        </h6> <br>  
+      
+      
+      <table style="background-color: white">
+      <thead>
+           
+           <tr>
+                <th></th>
+                <th>Yes (Segregated or integrated)</th>
+           </tr>
+    </thead>
+    <tbody>
+          <tr class="skyblue">
+                <td>Physical disabilities</td>
+                <td><input type="checkbox" name="S8Q1.1" value="10"></td>
+          </tr>
+          
+           </tbody>
+           <tbody>
+          <tr >
+                <td>Intellectual disabilities</td>
+                <td><input type="checkbox" name="S8Q1.1" value="10"></td>
+          </tr>
+          
+           </tbody>
+           <tbody>
+          <tr class="skyblue">
+                <td>Sensory disabilities</td>
+                <td><input type="checkbox" name="S8Q1.1" value="10"></td>
+          </tr>
+          
+           </tbody>
+           <tbody>
+          <tr >
+                <td>Mental health difficulties</td>
+                <td><input type="checkbox" name="S8Q1.1" value="10"></td>
+          </tr>
+          
+           </tbody>
+      </table>
+      
+      <table style="background-color: white">
+      <thead>
+           
+           <tr>
+                <th></th>
+                <th>Yes</th>
+                <th>No</th>
+          </tr>
+    </thead>
+    <tbody>
+          <tr >
+                <td>2. Do people with disabilities use the gym, pool, or 
+                participate in group activities etc. alongside other members?</td>
+                <td><input type="radio" name="S8Q2" value="1"></td>
+                <td><input type="radio" name="S8Q2" value="0"></td>
+          </tr>
+          
+           </tbody>
+           </table>
+           
+           <h6>
+        <B> 
+          If Yes please complete table below
+        </B>  
+        </h6> <br>  
+      
+      
+      <table style="background-color: white">
+      <thead>
+           
+           <tr>
+                <th></th>
+                <th>Yes</th>
+           </tr>
+    </thead>
+    <tbody>
+          <tr class="skyblue">
+                <td>Physical disabilities</td>
+                <td><input type="checkbox" name="S8Q2.1" value="10"></td>
+          </tr>
+          
+           </tbody>
+           <tbody>
+          <tr >
+                <td>Intellectual disabilities</td>
+                <td><input type="checkbox" name="S8Q2.1" value="10"></td>
+          </tr>
+          
+           </tbody>
+           <tbody>
+          <tr class="skyblue">
+                <td>Sensory disabilities</td>
+                <td><input type="checkbox" name="S8Q2.1" value="10"></td>
+          </tr>
+          
+           </tbody>
+           <tbody>
+          <tr >
+                <td>Mental health difficulties</td>
+                <td><input type="checkbox" name="S8Q2.1" value="10"></td>
+          </tr>
+          
+           </tbody>
+      </table>
+      
+      <input type="button" id="sec8" value="Verdict" onClick="calcSection8()">
+      
+      <p id="total8"></p>
+      <br><br> <br>
+      
+      
+      <table style="background-color: white">
+      <thead>
+           <tr>
+                <th class="tableheader" colspan="3">
+                <h2>Section 9: People (60)</h2></th>
+           </tr>
+           <tr>
+                <th>1. Have you or any of your staff/volunteers had training 
+                that facilitates the inclusion of people with disabilities?</th>
+                <th>Yes</th>
+                <th>No</th>
+          </tr>
+    </thead>
+    <tbody>
+          <tr class="skyblue">
+                <td>a. Operational (teaching/instructional staff)</td>
+                <td><input type="radio" name="S9Q1.1" value="10"></td>
+                <td><input type="radio" name="S9Q1.1" value="0"></td>
+          </tr>
+          
+           </tbody>
+    <tbody>
+          <tr >
+                <td>b. Management</td>
+                <td><input type="radio" name="S9Q1.2" value="10"></td>
+                <td><input type="radio" name="S9Q1.2" value="0"></td>
+          </tr>
+          
+           </tbody>
+    <tbody>
+          <tr class="skyblue">
+                <td>c. Front of house</td>
+                <td><input type="radio" name="S9Q1.3" value="10"></td>
+                <td><input type="radio" name="S9Q1.3" value="0"></td>
+          </tr>
+          
+           </tbody>
+    <tbody>
+          <tr >
+                <td>d. Stakeholders/ contracted staff</td>
+                <td><input type="radio" name="S9Q1.4" value="10"></td>
+                <td><input type="radio" name="S9Q1.4" value="0"></td>
+          </tr>
+          
+           </tbody>
+           </table>
+           
+           <table style="background-color: white">
+      <thead>
+           
+           <tr>
+                <th></th>
+                <th>Yes</th>
+                <th>No</th>
+          </tr>
+    </thead>
+    <tbody>
+          <tr class="skyblue">
+                <td>2. Are people with disabilities employed by your 
+                organisation and/or represented onyour steering committee / 
+                management committee / board of management etc.?</td>
+                <td><input type="radio" name="S9Q2" value="10"></td>
+                <td><input type="radio" name="S9Q2" value="0"></td>
+          </tr>
+          
+           </tbody>
+           </table>
+           
+           <table style="background-color: white">
+      <thead>
+           
+           <tr>
+                <th></th>
+                <th>Yes</th>
+                <th>No</th>
+          </tr>
+    </thead>
+    <tbody>
+          <tr >
+                <td>3. Is there a member of staff allocated as a liaison / point 
+                person for customers with disabilities?</td>
+                <td><input type="radio" name="S9Q3" value="10"></td>
+                <td><input type="radio" name="S9Q3" value="0"></td>
+          </tr>
+          
+           </tbody>
+           </table>
+      
+      <input type="button" id="sec9" value="Verdict" onClick="calcSection9()">
+      
+      <p id="total9"></p>
+      <br><br> <br>
+      
+      
+      <table style="background-color: white">
+      <thead>
+           <tr>
+                <th class="tableheader" colspan="3">
+                <h2>Section 10: Physical Access / Place (50)</h2></th>
+           </tr>
+           <tr>
+                <th></th>
+                <th>Yes</th>
+                <th>No</th>
+          </tr>
+    </thead>
+    <tbody>
+          <tr >
+                <td>1. Have you or your colleagues carriedout an audit to 
+                evaluate the Universal ability  of your facility?</td>
+                <td><input type="radio" name="S10Q1" value="10"></td>
+                <td><input type="radio" name="S10Q1" value="0"></td>
+          </tr>
+          
+           </tbody>
+      </table>
+      
+      <h6>
+        <B> 
+          2. Does your facility( or the facility you use) consider the following 
+          disabilities when evaluating Universal ability:
+        </B>  
+        </h6> <br>  
+      
+      
+      <table style="background-color: white">
+      <thead>
+           
+           <tr>
+                <th><B>Disability Category</th>
+                <th>Yes</th>
+          </tr>
+    </thead>
+    <tbody>
+          <tr class="skyblue">
+                <td>Physical disabilities?</td>
+                <td><input type="checkbox" name="S10Q2" value="10"></td>
+          </tr>
+          
+           </tbody>
+           <tbody>
+          <tr >
+                <td>Intellectual disabilities</td>
+                <td><input type="checkbox" name="S10Q2" value="10"></td>
+          </tr>
+          
+           </tbody>
+           <tbody>
+          <tr class="skyblue">
+                <td>Sensory disabilities</td>
+                <td><input type="checkbox" name="S10Q2" value="10"></td>
+          </tr>
+          
+           </tbody>
+           <tbody>
+          <tr >
+                <td>Mental health difficulties</td>
+                <td><input type="checkbox" name="S10Q2" value="10"></td>
+          </tr>
+      </table>
+      
+      <input type="button" id="sec10" value="Verdict" onClick="calcSection10()">
+      
+      <p id="total10"></p>
+      <br><br> <br>
+      
+      
+      <table style="background-color: white">
+      <thead>
+           <tr>
+                <th class="tableheader" colspan="3">
+                <h2>Section 11: Promotion (20)</h2></th>
+           </tr>
+           <tr>
+                <th></th>
+                <th>Yes</th>
+                <th>No</th>
+          </tr>
+    </thead>
+    <tbody>
+          <tr class="skyblue">
+                <td>1. Is your promotional material inclusive of people with 
+                disabilities?</td>
+                <td><input type="radio" name="S11Q1" value="10"></td>
+                <td><input type="radio" name="S11Q1" value="0"></td>
+          </tr>
+          
+           </tbody>
+    <tbody>
+          <tr >
+                <td>2. Have you or your colleagues/staff developed any 
+                promotional materials with the aimof attracting people with 
+                disabilities?</td>
+                <td><input type="radio" name="S11Q2" value="10"></td>
+                <td><input type="radio" name="S11Q2" value="0"></td>
+          </tr>
+          
+           </tbody>
+      </table>
+      
+      <input type="button" id="sec11" value="Verdict" onClick="calcSection11()">
+      
+      <p id="total11"></p>
+      <br><br> <br>
+      
+        
+      <input type="button" onclick="getAllScores()" value="Submit Questionnaire">
+      
+    </form>    
+    
+    
+    </div>
+  </section>
+
+      
+    
+  <!-- About -->
+  
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">About</h2>
+          
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="timeline">
+            <li>
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="img/about/1.jpg" 
+                     alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>2009-2011</h4>
+                  <h4 class="subheading">Our Humble Beginnings</h4>
+                </div>
+                <div class="timeline-body">
+<!--Reference for blurb http://www.amtelaudit.com/about-us/company-profile.php-->
+                  <p class="text-muted">AmTelAudit was established in 1998 as 
+                  The American Association of Telecom Auditors, Ltd. Today, 
+                  AmTelAudit offers a team of 30 industry-specific analysts, 
+                  auditors, and negotiators representing a multitude of 
+                  customers in diverse industries. Every audit is managed, 
+                  reviewed, and approved by AmTelAudit's President and Founder, 
+                  Patrick Cummings.</p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="img/about/2.jpg" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>March 2011</h4>
+                  <h4 class="subheading">An Agency is Born</h4>
+                </div>
+                <div class="timeline-body">
+<!--Reference for blurb http://www.amtelaudit.com/about-us/company-profile.php-->
+                  <p class="text-muted">AmTelAudit was established in 1998 as 
+                  The American Association of Telecom Auditors, Ltd. Today, 
+                  AmTelAudit offers a team of 30 industry-specific analysts, 
+                  auditors, and negotiators representing a multitude of 
+                  customers in diverse industries. Every audit is managed, 
+                  reviewed, and approved by AmTelAudit's President and Founder, 
+                  Patrick Cummings.</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>December 2012</h4>
+                  <h4 class="subheading">Transition to Full Service</h4>
+                </div>
+                <div class="timeline-body">
+<!--Reference for blurb http://www.amtelaudit.com/about-us/company-profile.php-->
+                  <p class="text-muted">AmTelAudit was established in 1998 as 
+                  The American Association of Telecom Auditors, Ltd. Today, 
+                  AmTelAudit offers a team of 30 industry-specific analysts, 
+                  auditors, and negotiators representing a multitude of 
+                  customers in diverse industries. Every audit is managed, 
+                  reviewed, and approved by AmTelAudit's President and Founder, 
+                  Patrick Cummings.</p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>July 2014</h4>
+                  <h4 class="subheading">Phase Two Expansion</h4>
+                </div>
+                <div class="timeline-body">
+<!--Reference for blurb http://www.amtelaudit.com/about-us/company-profile.php-->
+                  <p class="text-muted">AmTelAudit was established in 1998 as 
+                  The American Association of Telecom Auditors, Ltd. Today, 
+                  AmTelAudit offers a team of 30 industry-specific analysts, 
+                  auditors, and negotiators representing a multitude of 
+                  customers in diverse industries. Every audit is managed, 
+                  reviewed, and approved by AmTelAudit's President and Founder, 
+                  Patrick Cummings.</p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <h4>Be Part
+                  <br>Of Our
+                  <br>Story!</h4>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>   
+
+  
+     
+
+  <!-- Contact -->
+  
+ 
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Contact Us</h2>
+          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet 
+                                                    consectetur.</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <form id="contactForm" name="sentMessage" novalidate="novalidate">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input class="form-control" id="name" type="text" 
+                         placeholder="Your Name *" required="required" 
+                         data-validation-required-message="Please enter your name.">
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" id="email" type="email" 
+                         placeholder="Your Email *" required="required" 
+                         data-validation-required-message="Please enter your 
+                                                            email address.">
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" id="phone" type="tel" 
+                         placeholder="Your Phone *" required="required" 
+                         data-validation-required-message="Please enter your 
+                                                            phone number.">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <textarea class="form-control" id="message" 
+                             placeholder="Your Message *" required="required" 
+                             data-validation-required-message="Please enter a 
+                                                                message."></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="col-lg-12 text-center">
+                <div id="success"></div>
+                <fieldset>
+  					<br><button type = "button" onclick = "alert('Thanks I will be in touch!')">Click here for email updates!</button><br><br>
+  				</fieldset><br>
+  				
+                <button id="sendMessageButton" class="btn btn-primary btn-xl 
+                            text-uppercase" type="submit">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>     
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <span class="copyright">Colm Gallagher &copy; 2019</span>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="https://twitter.com/LivingLegendDJ">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/colm.l.gallagher">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://ie.linkedin.com/in/colmgallagherdjradio">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline quicklinks">
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+              
+               
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Contact form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/agency.min.js"></script>
+  
+  
+
+</body>
+
+</html>

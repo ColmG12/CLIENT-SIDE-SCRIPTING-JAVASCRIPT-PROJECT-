@@ -1,0 +1,105 @@
+body{
+	width:100%;
+	margin:0;
+	padding:0;
+	font-size:62.5%;
+	background-color: #9EDDF5;
+}
+
+.content{
+	width:70%;
+	margin:auto;
+	margin-top:1em;
+	background-color: #F49FE7;
+	color: #0D0178;
+	font-family: Helvetica, Arial, sans-serif;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 1em;
+}
+
+.header{	font-size: 2.5em;
+			padding-left: 2em;
+			padding-top: .5em;
+			text-align: center;
+		}
+
+.banner img{
+	width: 100%;
+	height:100%;
+	margin:0;
+	padding-bottom: 0;
+}
+
+.nav{
+	background-color: black;
+	margin:0;
+	padding-top:0;
+}
+
+
+a{
+	font-size:2em;
+	padding:.5em;
+	margin-left:4.5em;
+	line-height: 3em;
+	text-align: center;
+	color:white;
+	text-decoration: none;
+}
+
+p{	font-size: 1.6em;
+	padding-left:1em;
+	padding-right:1em;
+}
+
+li{	font-size:1.8em;
+}
+
+h1{	font-size: 2em;
+}
+
+h2{	font-size: 1.5em;
+}
+
+h3{	font-size: 1.17em;
+}
+
+h4{	font-size: 1.12em;
+}
+
+h5{	font-size: .83em;
+}
+
+h6{	font-size: .75em;
+}
+
+th {border: 1px solid black;
+     padding: 1em;
+     font-size: 1.8em;
+}
+
+td{	border: 1px solid black;
+     padding: 1em;
+     font-size: 1.6em;
+ }
+
+table {border-collapse: collapse;
+		width:100%;
+		margin-top: .5em;
+}
+
+.tableheader{	background-color: #9EDDF5;
+                   font-weight: bold;
+                   font-size: 3em;
+                   text-align: center
+}
+
+.rank		{	text-align: center;
+}
+
+.peak		{	text-align: center;
+}
+
+.skyblue	{	background-color: #F49FE7;
+}

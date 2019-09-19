@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Team Rosters</title>
+    <link href="cvtech.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var orioles = new Array();
+        orioles[0] = "Jason Berken";
+        orioles[1] = "Jeremy Guthrie";
+        orioles[2] = "David Hernandez";
+        orioles[3] = "Brian Matusz";
+        orioles[4] = "Chris Tillman";
+        orioles[5] = "Matt Albers";
+        orioles[6] = "Danys Báez";
+        orioles[7] = "Brian Bass";
+        orioles[8] = "Mark Hendrickson";
+        orioles[9] = "Cla Meredith";
+        orioles[10] = "Chris Ray";
+        orioles[11] = "Jim Johnson";
+        orioles[12] = "Chad Moeller";
+        orioles[13] = "Matt Wieters";
+        orioles[14] = "Robert Andino";
+        orioles[15] = "Aubrey Huff";
+        orioles[16] = "César Izturis";
+        orioles[16] = "Melvin Mora";
+        orioles[18] = "Brian Roberts";
+        orioles[19] = "Ty Wigginton";
+        orioles[20] = "Adam Jones";
+        orioles[21] = "Nick Markakis";
+        orioles[22] = "Félix Pie";
+        orioles[23] = "Nolan Reimold";
+        orioles[24] = "Luke Scott";
+
+        var yankees = new Array();
+        yankees[0] = "A. J. Burnett";
+        yankees[1] = "Joba Chamberlain";
+        yankees[2] = "Sergio Mitre";
+        yankees[3] = "Andy Pettitte";
+        yankees[4] = "CC Sabathia";
+        yankees[5] = "Alfredo Aceves";
+        yankees[6] = "Brian Bruney";
+        yankees[7] = "Phil Coke";
+        yankees[8] = "Chad Gaudin";
+        yankees[9] = "Phil Hughes";
+        yankees[10] = "David Robertson";
+        yankees[11] = "Mariano Rivera";
+        yankees[12] = "José Molina";
+        yankees[13] = "Jorge Posada";
+        yankees[14] = "Robinson Canó";
+        yankees[15] = "Jerry Hairston, Jr.";
+        yankees[16] = "Derek Jeter";
+        yankees[17] = "Ramiro Peña";
+        yankees[18] = "Alex Rodriguez";
+        yankees[19] = "Mark Teixeira";
+        yankees[20] = "Melky Cabrera";
+        yankees[21] = "Johnny Damon";
+        yankees[22] = "Eric Hinske";
+        yankees[23] = "Nick Swisher";
+        yankees[24] = "Hideki Matsui";
+
+        function fillTeamRoster(team) {
+            document.forms[0].team.options.length = 0;
+            var teamName = "";
+            var player = new Option();
+            switch (team) {
+                case 1:
+                    for (var i = 0; i < orioles.length; ++i) {
+                        player = new Option();
+                        player.text = orioles[i];
+                        player.value = orioles[i];
+                        document.forms[0].team.options[i] = player;
+                    }
+                    break;
+                case 2:
+                    for (var i = 0; i < yankees.length; ++i) {
+                        player = new Option();
+                        player.text = yankees[i];
+                        player.value = yankees[i];
+                        document.forms[0].team.options[i] = player;
+                    }
+                    break;
+            }
+        }
+
+
+        /* ]]> */
+    </script>
+
+</head>
+<body>
+    <form name="main" action="">
+    <select name="Make" onchange="fillTeamRoster(this.selectedIndex);">
+        <option value="-1">Select Team</option>
+        <option value="1">Baltimore Orioles</option>
+        <option value="2">New York Yankees</option>
+    </select>
+    <br />
+    <select name="team" size="5">
+        <option>&nbsp;</option>
+    </select>
+    </form>
+</body>
+</html>
